@@ -4,7 +4,7 @@ schema {
 }
 
 type Query {
-  allStudents(): [Student]
+  allStudents: [Student]
 }
 
 type Mutation {
