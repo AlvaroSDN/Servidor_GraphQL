@@ -38,7 +38,10 @@ public class StudentRepository {
 		doc.append("name", student.getName());
 		doc.append("email", student.getEmail());
 		students.insertOne(doc);
-		return student(doc);
+		return new Student(
+				doc.get("_id").toString(),
+				doc.getString("name"),
+				doc.getString("email"));
 	}
 
 	private Student student(Document doc) {

@@ -19,9 +19,9 @@ import graphql.servlet.GraphQLContext;
 import graphql.servlet.SimpleGraphQLServlet;
 
 @WebServlet(urlPatterns = "/graphql")
-public class GraphQL_Endpoint extends SimpleGraphQLServlet {
+public class GraphQLEndpoint extends SimpleGraphQLServlet {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 	private static final StudentRepository studentRepository;
     
 	static {
@@ -30,7 +30,7 @@ public class GraphQL_Endpoint extends SimpleGraphQLServlet {
         studentRepository = new StudentRepository(mongo.getCollection("Students"));
     }
 	
-	public GraphQL_Endpoint() {
+	public GraphQLEndpoint() {
 		super(buildSchema());
 	}
 	
