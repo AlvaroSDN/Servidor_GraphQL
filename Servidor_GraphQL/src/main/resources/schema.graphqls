@@ -1,0 +1,19 @@
+schema {
+	query: Query
+    mutation: Mutation
+}
+
+type Query {
+    allStudents(): [Student]
+}
+
+type Mutation {
+    createStudent(name: String!, email: String!): Student
+}
+
+type Student {
+    id: ID!
+    name: String!
+    email: String!
+}
+
